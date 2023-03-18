@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-gap: 1px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #555;
+    text-align: center;
+    line-height: 30px;
+    background-color: #ccc;
+    font-weight: bold;
+    font-size: 14px;
+    user-select: none;
+}
+
+.cell.mine {
+    background-color: red;
+}
+
+.cell.revealed {
+    background-color: #ddd;
+}
+
+.cell:not(.revealed) {
+    background-color: #999;
+}
+
+.cell.mine.revealed {
+    background-color: red;
+    color: #fff;
+}
